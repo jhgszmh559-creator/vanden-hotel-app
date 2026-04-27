@@ -3164,22 +3164,60 @@ vec4 projected_point=u_matrix*vec4(world_pos,1.0);projected_point.xy+=projected_
               <a href="/hotel/${a}" style="display: block; text-align: center; background: #9F7263; color: white; padding: 10px; border-radius: 8px; text-decoration: none;">View Details</a>
             </div>
           </div>
-        `;new M.default.Popup({offset:15,closeButton:!1}).setLngLat(t).setHTML(s).addTo(r.current)}),r.current.on(`mouseenter`,`clusters`,()=>{r.current.getCanvas().style.cursor=`pointer`}),r.current.on(`mouseleave`,`clusters`,()=>{r.current.getCanvas().style.cursor=``}),r.current.on(`mouseenter`,`unclustered-point`,()=>{r.current.getCanvas().style.cursor=`pointer`}),r.current.on(`mouseleave`,`unclustered-point`,()=>{r.current.getCanvas().style.cursor=``}),a(!0)}))},[]),(0,v.useEffect)(()=>{if(!r.current||!i)return;let t={type:`FeatureCollection`,features:e.filter(e=>e.lng&&e.lat).map(e=>({type:`Feature`,geometry:{type:`Point`,coordinates:[e.lng,e.lat]},properties:{id:e.id,name:e.name,slug:e.slug,full_location_info:e.full_location_info,hero_image_url:e.hero_image_url||`https://images.unsplash.com/photo-1542314831-c6a4d27160c9?auto=format&fit=crop&w=800&q=80`}}))};r.current.getSource(`vanden-hotels`).setData(t)},[e,i]),(0,C.jsx)(`div`,{style:{flex:1,position:`relative`},children:(0,C.jsx)(`div`,{ref:n,style:{width:`100%`,height:`100%`}})})}function P(){let[e,t]=(0,v.useState)(!0),[n,r]=(0,v.useState)([]),[i,a]=(0,v.useState)([]),[o,s]=(0,v.useState)([]),[c,l]=(0,v.useState)(`list`),[u,d]=(0,v.useState)({searchQuery:``,mapBounds:null,michelinKeys:[],forbesRatings:[],roomSizes:[],brands:[],amenities:[]});(0,v.useEffect)(()=>{if(window.location.hostname===`localhost`||window.location.hostname===`127.0.0.1`)return;let e=setInterval(()=>{let n=window.Wized?.data?.r;n?.Load_all_active_hotels?.data&&(clearInterval(e),r([...n.Load_all_active_hotels.data]),a(n.Load_all_amenities?.data?[...n.Load_all_amenities.data]:[]),s(n.Load_all_brands?.data?[...n.Load_all_brands.data]:[]),t(!1))},200);return()=>clearInterval(e)},[]);let{filteredHotels:f,filterCounts:p}=x(n,u);return e?(0,C.jsx)(`div`,{style:{height:`100vh`,display:`flex`,alignItems:`center`,justifyContent:`center`,backgroundColor:`#fbf8f7`},children:(0,C.jsx)(`p`,{style:{color:`#2d221d`,fontSize:`18px`},children:`Loading Vanden Collection...`})}):(0,C.jsxs)(C.Fragment,{children:[(0,C.jsx)(`style`,{children:`
+        `;new M.default.Popup({offset:15,closeButton:!1}).setLngLat(t).setHTML(s).addTo(r.current)}),r.current.on(`mouseenter`,`clusters`,()=>{r.current.getCanvas().style.cursor=`pointer`}),r.current.on(`mouseleave`,`clusters`,()=>{r.current.getCanvas().style.cursor=``}),r.current.on(`mouseenter`,`unclustered-point`,()=>{r.current.getCanvas().style.cursor=`pointer`}),r.current.on(`mouseleave`,`unclustered-point`,()=>{r.current.getCanvas().style.cursor=``}),a(!0)}))},[]),(0,v.useEffect)(()=>{if(!r.current||!i)return;let t={type:`FeatureCollection`,features:e.filter(e=>e.lng&&e.lat).map(e=>({type:`Feature`,geometry:{type:`Point`,coordinates:[e.lng,e.lat]},properties:{id:e.id,name:e.name,slug:e.slug,full_location_info:e.full_location_info,hero_image_url:e.hero_image_url||`https://images.unsplash.com/photo-1542314831-c6a4d27160c9?auto=format&fit=crop&w=800&q=80`}}))};r.current.getSource(`vanden-hotels`).setData(t)},[e,i]),(0,C.jsx)(`div`,{style:{flex:1,position:`relative`},children:(0,C.jsx)(`div`,{ref:n,style:{width:`100%`,height:`100%`}})})}function P(){let[e,t]=(0,v.useState)(!0),[n,r]=(0,v.useState)([]),[i,a]=(0,v.useState)([]),[o,s]=(0,v.useState)([]),[c,l]=(0,v.useState)(`list`),[u,d]=(0,v.useState)({searchQuery:``,mapBounds:null,michelinKeys:[],forbesRatings:[],roomSizes:[],brands:[],amenities:[]});(0,v.useEffect)(()=>{if(window.location.hostname===`localhost`||window.location.hostname===`127.0.0.1`)return;let e=setInterval(()=>{let n=window.Wized?.data?.r;n?.Load_all_active_hotels?.data&&(clearInterval(e),r([...n.Load_all_active_hotels.data]),a(n.Load_all_amenities?.data?[...n.Load_all_amenities.data]:[]),s(n.Load_all_brands?.data?[...n.Load_all_brands.data]:[]),t(!1))},200);return()=>clearInterval(e)},[]);let{filteredHotels:f,filterCounts:p}=x(n,u);return e?(0,C.jsx)(`div`,{style:{height:`100vh`,width:`100%`,display:`flex`,alignItems:`center`,justifyContent:`center`,backgroundColor:`#fbf8f7`},children:(0,C.jsx)(`p`,{style:{color:`#2d221d`,fontSize:`18px`},children:`Loading Vanden Collection...`})}):(0,C.jsxs)(C.Fragment,{children:[(0,C.jsx)(`style`,{children:`
+        /* 1. Vanden Colors */
         :root {
           --vd-taupe-dark: #a28a8a;
-          --vd-bronze: #8a8068;
-          --vd-success: #5f7c58;
           --vd-terracotta: #9f7263;
           --vd-asphalt-ink: #2d221d;
-          --vd-asphalt: #564438;
-          --vd-asphalt-2: #6a554a;
           --vd-asphalt-muted: #797168;
           --vd-neutral: #f4f3f2;
           --vd-vista-white: #fbf8f7;
           --vd-taupe-100: #e0d8c8;
-          --vd-taupe-101: #ccc9bc;
           --vd-terracotta-ink: #6f4f45;
           --vd-shell: #eddfdb;
-          --vd-shell-ink: #dfc9c2;
         }
-      `}),(0,C.jsxs)(`div`,{className:`vanden-app-container`,style:{display:`flex`,height:`100%`,width:`100%`},children:[(0,C.jsx)(`div`,{className:`vanden-sidebar`,style:{width:`340px`,overflowY:`auto`,borderRight:`1px solid var(--vd-taupe-100)`},children:(0,C.jsx)(w,{filterCounts:p,activeFilters:u,toggleFilter:(e,t)=>{d(n=>{let r=n[e],i=r.includes(t);return{...n,[e]:i?r.filter(e=>e!==t):[...r,t]}})},amenitiesData:i,brandsData:o,clearMapBounds:()=>d(e=>({...e,mapBounds:null})),updateSearch:e=>d(t=>({...t,searchQuery:e}))})}),(0,C.jsxs)(`div`,{className:`vanden-main-content`,style:{flex:1,position:`relative`,display:`flex`,flexDirection:`column`},children:[(0,C.jsxs)(`div`,{className:`view-toggle`,style:{position:`absolute`,top:`20px`,right:`20px`,zIndex:10},children:[(0,C.jsx)(`button`,{onClick:()=>l(`list`),style:{padding:`10px 20px`,backgroundColor:c===`list`?`var(--vd-terracotta)`:`white`,color:c===`list`?`white`:`black`,cursor:`pointer`,border:`1px solid var(--vd-taupe-100)`,borderRadius:`8px 0 0 8px`},children:`List`}),(0,C.jsx)(`button`,{onClick:()=>l(`map`),style:{padding:`10px 20px`,backgroundColor:c===`map`?`var(--vd-terracotta)`:`white`,color:c===`map`?`white`:`black`,cursor:`pointer`,border:`1px solid var(--vd-taupe-100)`,borderLeft:`none`,borderRadius:`0 8px 8px 0`},children:`Map`})]}),c===`list`?(0,C.jsx)(T,{hotels:f}):(0,C.jsx)(N,{hotels:f,onBoundsChange:e=>d(t=>({...t,mapBounds:e}))})]})]})]})}(0,y.createRoot)(document.getElementById(`root`)).render((0,C.jsx)(v.StrictMode,{children:(0,C.jsx)(P,{})}));
+
+        /* 2. Fullscreen & Mobile Layout Rules */
+        .vanden-app-container {
+          display: flex;
+          flex-direction: row;
+          height: 100%; 
+          width: 100%;
+          overflow: hidden; /* Prevents the whole page from stretching */
+        }
+        
+        .vanden-sidebar {
+          width: 340px;
+          height: 100%;
+          overflow-y: auto;
+          border-right: 1px solid var(--vd-taupe-100);
+          flex-shrink: 0; /* Prevents the sidebar from getting squished */
+          background-color: #fff;
+        }
+
+        .vanden-main-content {
+          flex: 1;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          overflow: hidden;
+        }
+
+        /* 3. Mobile Overrides (Triggers on screens smaller than 900px) */
+        @media (max-width: 900px) {
+          .vanden-app-container {
+            flex-direction: column; /* Stacks sidebar on top of list */
+          }
+          .vanden-sidebar {
+            width: 100%;
+            height: 35%; /* Sidebar takes top 35% of screen */
+            border-right: none;
+            border-bottom: 1px solid var(--vd-taupe-100);
+          }
+          .vanden-main-content {
+            height: 65%; /* Map/List takes bottom 65% */
+          }
+        }
+      `}),(0,C.jsxs)(`div`,{className:`vanden-app-container`,children:[(0,C.jsx)(`div`,{className:`vanden-sidebar`,children:(0,C.jsx)(w,{filterCounts:p,activeFilters:u,toggleFilter:(e,t)=>{d(n=>{let r=n[e],i=r.includes(t);return{...n,[e]:i?r.filter(e=>e!==t):[...r,t]}})},amenitiesData:i,brandsData:o,clearMapBounds:()=>d(e=>({...e,mapBounds:null})),updateSearch:e=>d(t=>({...t,searchQuery:e}))})}),(0,C.jsxs)(`div`,{className:`vanden-main-content`,children:[(0,C.jsxs)(`div`,{className:`view-toggle`,style:{position:`absolute`,top:`20px`,right:`20px`,zIndex:10},children:[(0,C.jsx)(`button`,{onClick:()=>l(`list`),style:{padding:`10px 20px`,backgroundColor:c===`list`?`var(--vd-terracotta)`:`white`,color:c===`list`?`white`:`black`,cursor:`pointer`,border:`1px solid var(--vd-taupe-100)`,borderRadius:`8px 0 0 8px`},children:`List`}),(0,C.jsx)(`button`,{onClick:()=>l(`map`),style:{padding:`10px 20px`,backgroundColor:c===`map`?`var(--vd-terracotta)`:`white`,color:c===`map`?`white`:`black`,cursor:`pointer`,border:`1px solid var(--vd-taupe-100)`,borderLeft:`none`,borderRadius:`0 8px 8px 0`},children:`Map`})]}),c===`list`?(0,C.jsx)(T,{hotels:f}):(0,C.jsx)(N,{hotels:f,onBoundsChange:e=>d(t=>({...t,mapBounds:e}))})]})]})]})}(0,y.createRoot)(document.getElementById(`root`)).render((0,C.jsx)(v.StrictMode,{children:(0,C.jsx)(P,{})}));
